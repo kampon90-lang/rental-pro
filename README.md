@@ -50,7 +50,10 @@ cd frontend
 dx build --release --platform web
 cd ..
 
-# 3. Start the single-port Axum server (serves both API and compiled WASM SPA on :3000)
+# 3. (Optional) Seed 2 years (24 months) of realistic dummy data for 10 units
+cargo run -p backend --bin seed_demo
+
+# 4. Start the single-port Axum server (serves both API and compiled WASM SPA on :3000)
 FRONTEND_DIST_DIR=target/dx/frontend/release/web/public cargo run --release -p backend
 ```
 

@@ -15,7 +15,7 @@
 
 ## Next Immediate Action
 > **All Specification Milestones (Phases 1–5) Completed.**
-> Ready for local launch (`dx build --release --platform web` in `frontend/` + `cargo run --release -p backend`) or production Linux `systemd` deployment following `DEPLOYMENT.md`.
+> Ready for local launch (`dx build --release --platform web` in `frontend/` + `cargo run --release -p backend`), optional 2-year 10-unit demo seeding (`cargo run -p backend --bin seed_demo`), or production Linux `systemd` deployment following `DEPLOYMENT.md`.
 
 ## Milestone Checklist
 - [x] **Phase 1: Workspace, SQLite Migrations & Auth**
@@ -57,3 +57,4 @@
 - **[2026-11-26 — Milestone 5.1]:** Implemented `shared::expenses`, `backend::expenses` (CRUD + SHA-256 receipt uploads to `./data/uploads/expenses/YYYY/MM/`), and Dioxus `ExpensesPage` (`/expenses`). Verified zero-warning `cargo check` (host + WASM) and `cargo test` (24/24 tests green).
 - **[2026-11-26 — Milestone 5.2]:** Implemented `shared::dashboard`, `backend::dashboard` (`GET /api/dashboard` occupancy, Cash & Accrual P&L, property group P&L, overdue/expiring/50 ทวิ alerts), and upgraded `DashboardHomePage` (`/`). Verified zero-warning `cargo check` (host + WASM) and `cargo test` (26/26 tests green).
 - **[2026-11-26 — Milestone 5.3 (Phase 5 & Full Project Complete)]:** Added `rust_xlsxwriter` & `zip`, implemented `shared::reports`, `backend::reports_backup` (4 financial reports in `.xlsx` & UTF-8 BOM `.csv` + `GET /api/system/backup` SQLite `VACUUM INTO` + `uploads/` `.zip` download with temp cleanup), Dioxus `ReportsAndBackupPage` (`/reports`), and `DEPLOYMENT.md` Linux `systemd` guide. Verified zero-warning `cargo check` (host + WASM) and `cargo test` (27/27 tests green).
+- **[2026-11-26 — Demo Dataset Seeder]:** Added `backend/src/bin/seed_demo.rs` (`cargo run -p backend --bin seed_demo [-- --reset]`) and seeded `./data/rental.db` + `./data/uploads/` with 24 months (`2024-12` .. `2026-11` / `พ.ศ. 2567–2569`) of dummy data across 10 multi-type units (`R101–R202`, `CD-801`, `CD-1205`, `HS-01`, `HS-02`, `CM-01`).
