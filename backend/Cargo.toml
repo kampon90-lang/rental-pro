@@ -1,0 +1,31 @@
+[package]
+name = "backend"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+shared.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+qrcode.workspace = true
+chrono = { workspace = true, features = ["clock"] }
+thiserror.workspace = true
+
+axum.workspace = true
+tokio.workspace = true
+tower.workspace = true
+tower-http.workspace = true
+sqlx.workspace = true
+argon2.workspace = true
+krilla.workspace = true
+rustybuzz.workspace = true
+rand.workspace = true
+sha2.workspace = true
+hex.workspace = true
+cookie.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
+dotenvy.workspace = true
+rust_xlsxwriter.workspace = true
+zip.workspace = true
